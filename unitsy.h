@@ -6,7 +6,7 @@ typedef struct unitsy_env_t {
 
 #define unitsy_assert(test, message) do { \
   if (!(test)) { \
-    printf("%s:%d %s\n\n", __FILE__, __LINE__, message); \
+    printf("%s:%d:%s %s\n\n", __FILE__, __LINE__, __func__, message); \
     unitsy->result = 1; \
     return 1; \
   } \
